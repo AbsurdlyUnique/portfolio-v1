@@ -1,3 +1,4 @@
+@import './theme.css'; /* Import the theme variables */
 @import './markdown.css';
 
 html,
@@ -8,8 +9,13 @@ body,
   padding: 0;
 }
 
+html {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
 html.dark {
-  background: #121212;
+  background: hsl(var(--background));
   color-scheme: dark;
 }
 
@@ -18,7 +24,7 @@ html.dark {
 }
 
 #nprogress .bar {
-  background: rgb(13, 148, 136);
+  background: hsl(var(--primary));
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
